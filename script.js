@@ -14,8 +14,8 @@ document.body.addEventListener("mousemove", (e) => {
 
 gsap.to(splash, {
   x: "-100%", // slide out to the left
-  duration: 2.5, // animation duration
-  delay: 1,
+  duration: 0.5, // animation duration
+  delay: 0.5,
   ease: "power2.inOut", // smooth easing
   onComplete: () => {
     splash.style.display = "none"; // hide splash after animation

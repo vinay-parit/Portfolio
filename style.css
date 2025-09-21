@@ -3,7 +3,9 @@
 
 :root {
   --anton: "Anton";
-  --robot:  "Roboto Flex"
+  --robot:  "Roboto Flex";
+  --main-color: (#00F050);
+  --body-color:(#212121);
 }
 
 * {
@@ -17,12 +19,13 @@ body {
   height: 100%;
   width: 100%;
   font-size: 20px;
+  background-color: #212121;
 }
 
-body {
+/* body {
   overflow: hidden;
   cursor: none;
-}
+} */
 
 .splash {
   height: 100vh;
@@ -38,7 +41,7 @@ body {
 }
 
 .main {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-color: #212121;
   display: none;
@@ -81,16 +84,19 @@ body {
   color: #000;
 }
 
+/* ================ hero-section================== */
+
 .hero {
   display: flex;
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   align-items: center;
   justify-content: center;
+  /* background-color: aqua; */
 }
 
 .left {
-  width: 40%;
+  width: 50%;
   /* background-color: white; */
 }
 
@@ -143,8 +149,7 @@ body {
 
 .right p span {
   color: #00f050;
-
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .actionbtn {
@@ -169,6 +174,88 @@ body {
   background-color: #00f050;
 }
 
+
+/* ====================about-section========================= */
+
+
+.about-section{
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  /* background-color: bisque; */
+}
+
+.about-left{
+  width: 40%;
+  font-family: var(--anton);
+  color: white;
+  /* background-color: var(--body-color); */
+  /* background-color: #00f050; */
+  text-align: center;
+  padding-top: 4rem;
+  font-size: 3rem;
+  
+}
+
+.about-right{
+  width: 50%;
+  /* background-color: violet; */
+  padding-top: 5rem;
+  font-family: var(--robot);
+  color: white;
+  font-size: 1.5rem;
+ 
+  /* text-align: center; */
+  
+}
+
+.about-right p span:hover{
+  color: #00F050
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* MOUSE MAGNET */
 
 .mouse-magnet {
@@ -177,7 +264,7 @@ body {
   left: 0;
   height: 15px;
   width: 15px;
-  background: crimson;
+  background:#00f050;
   border-radius: 50%;
   z-index: 9999; /* higher than nav, main, etc */
   pointer-events: none; /* prevents blocking clicks */

@@ -30,7 +30,7 @@ body {
 .splash {
   height: 100vh;
   width: 100%;
-  background-color: beige;
+  background-color: black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,6 +38,7 @@ body {
 
 .splash h1 {
   font-size: 7rem;
+  color: aliceblue;
 }
 
 .main {
@@ -203,14 +204,15 @@ body {
   padding-top: 5rem;
   font-family: var(--robot);
   color: white;
-  font-size: 1.5rem;
- 
+  font-size: 1.4rem;
+  opacity: 0.4;
   /* text-align: center; */
   
 }
 
 .about-right p span:hover{
-  color: #00F050
+  color: #00F050;
+  opacity: 0.9;
   
 }
 

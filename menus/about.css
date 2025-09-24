@@ -159,6 +159,7 @@ body {
 }
 
 .skills{
+  /* height: 50vh; */
   margin-top: 3rem;
   text-align: center;
   background-color: #000;
@@ -168,6 +169,11 @@ body {
   color: #9e9d9d;
   font-family: var(--anton);
   font-size: 3rem;
+}
+
+.logos img{
+  width: 150px;
+  padding: 2rem;
 }
 
 marquee{

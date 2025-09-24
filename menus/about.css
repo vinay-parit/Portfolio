@@ -20,7 +20,7 @@ body {
   width: 100%;
   font-size: 20px;
   background-color: #212121;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .main {
@@ -70,6 +70,7 @@ body {
 /* ================ hero-section================== */
 
 .hero {
+  padding-top: 2rem;
   display: flex;
   width: 100%;
   height: 100%;
@@ -81,20 +82,27 @@ body {
 .right {
   width: 40%;
   height: 100%;
-  background-color: beige;
-
+  /* background-color: beige; */
 }
+
+.right img{
+  width: 500px;
+}
+
 
 .left {
   width: 60%;
   height: 100%;
-  /* background-color: aqua; */
+  /* padding-top: 2rem; */
+  padding: 3rem;
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
-  color: white;
+  color: #9e9d9d;
   line-height: 35px;
+  /* text-align: center; */
+  gap: 1rem;
 }
 
 .left h1 {
@@ -105,17 +113,13 @@ body {
   font-family: var(--anton);
   letter-spacing: 4px;
   color: white;
-  
-  font-size: 5rem;
-}
-
-.left h1 {
+  /* color:  #00f050; */
   font-size: 2rem;
 }
 
 .left h1 span:hover {
   color:  #00f050;;
-  font-size: 6rem;
+  /* font-size: 6rem; */
 }
 
 .left h2{
@@ -129,14 +133,14 @@ body {
 
 .left p span {
   color: #00f050;
-  font-size: 2.5rem;
+  /* font-size: 2.5rem; */
 }
 
 .actionbtn {
   display: flex;
   /* justify-content: center; */
   gap: 1.5rem;
-  padding-top: 2rem;
+  /* padding-top: 2rem; */
 }
 
 .actionbtn a{
@@ -154,8 +158,25 @@ body {
   background-color: #00f050;
 }
 
+.skills{
+  margin-top: 3rem;
+  text-align: center;
+  background-color: #000;
+}
 
+.skills span{
+  color: #9e9d9d;
+  font-family: var(--anton);
+  font-size: 3rem;
+}
 
+marquee{
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  /* background-color: #000; */
+  color:white;
+}
 
 
 

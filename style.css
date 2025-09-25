@@ -278,9 +278,31 @@ body {
   text-align: center;
 }
 
+.bottom{
+  display: flex;
+  background-color: #000;
+  justify-content: space-between;
+  padding: 0rem 4rem;
+  /* gap: 15rem; */
+}
 
 
+.footer i {
+  font-size: 2rem;
+  color:#00F050;
+}
 
+.footer a {
+  text-decoration: none;
+  font-family: var(--anton);
+  color:#9e9d9d;
+}
+
+.footer h3{
+  color: #9e9d9d;
+  font-family: var(--robot);
+  /* text-align: center; */
+}
 
 
 

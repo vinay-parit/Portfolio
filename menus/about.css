@@ -158,31 +158,8 @@ body {
   background-color: #00f050;
 }
 
-.skills{
-  /* height: 50vh; */
-  margin-top: 3rem;
-  text-align: center;
-  background-color: #000;
-}
 
-.skills span{
-  color: #9e9d9d;
-  font-family: var(--anton);
-  font-size: 3rem;
-}
 
-.logos img{
-  width: 150px;
-  padding: 2rem;
-}
-
-marquee{
-  height: 20vh;
-  display: flex;
-  align-items: center;
-  /* background-color: #000; */
-  color:white;
-}
 
 
 

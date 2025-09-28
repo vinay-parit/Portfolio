@@ -317,9 +317,51 @@ hr{
 
 .box1, .box2, .box3{
   width: 70%;
-  height: 100vh;
-  background-color: black;
-  border: 1px solid white;
+  height: 85vh;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.box1{
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+  /* border-radius: 1rem; */
+}
+
+.box1 img{
+  height: 400px;
+  width: 90%;
+  /* border-radius: 1rem; */
+}
+
+.box1 h3{
+  font-family: var(--Inter);
+  padding-left: 2.1rem;
+  padding-top: 1rem;
+}
+
+.box1 p{
+  padding: .5rem 2rem;
+  font-family: var(--Inter);
+  font-size: 18px;
+  /* font-weight: 250; */
+  /* opacity: .5; */
+  color: #9E9D9D;
+}
+
+.box1 p:hover{
+  color: #000;
+}
+
+.todo-btn {
+  padding: 0rem 2.1rem;
+} 
+
+.todo-btn a{
+  padding: 1rem 2rem;
+  text-decoration: none;
 }
 
 /* =================== Footer ====================== */

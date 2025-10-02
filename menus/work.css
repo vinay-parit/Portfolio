@@ -16,6 +16,7 @@
   --poppins: "poppins";
   --Inter: "Inter";
   --body-color: #8C95A5;
+  --work-section-bgc: #323C4F;
 }
 
 * {
@@ -115,4 +116,14 @@ body {
   font-size: 4rem;
   padding: 3rem;
   /* padding-top: 3rem; */
+  text-align: center;
+}
+
+
+.work-bottom{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color:var(--work-section-bgc);
+  gap: 1rem;
 }

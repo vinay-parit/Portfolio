@@ -1,6 +1,7 @@
 :root {
   --white: #ffffff;
   --black: #000000;
+  --body-color: #111010;
 }
 
 * {
@@ -9,26 +10,64 @@
   box-sizing: border-box;
 }
 
-body{
-    color: var(--white);
+body {
+  color: var(--white);
 }
 
-header{
-    background-color: var(--black);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-nav{
-    max-width: 1024px;
-    width: 100%;
-    padding: 2rem;
-    display: flex;
-    justify-content: space-between;
-}
-
-.menu{
+header {
+  background-color: var(--black);
   display: flex;
-  gap: 20px
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  max-width: 1024px;
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.outer {
+  background-color: var(--body-color);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.middle {
+  max-width: 1024px;
+  height: 100%;
+  width: 100%;
+  background-color: #2e2d2d;
+  /* opacity: 0.1; */
+  background-image: repeating-radial-gradient(
+      circle at 0 0,
+      transparent 0,
+      #282626 9px
+    ),
+    repeating-linear-gradient(#08080855, #050505);
+}
+
+
+.inner{
+  max-width: 776px;
+  width: 100%;
+  
+}
+
+.image{
+  height: 250px;
+  width: 100%;
+  background-image: url(/images/WhatsApp\ Image\ 2025-10-16\ at\ 20.14.26.jpeg);
+  background-size: cover;
+
 }

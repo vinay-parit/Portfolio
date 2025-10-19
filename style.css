@@ -28,7 +28,7 @@ header {
 }
 
 nav {
-  max-width: 1024px;
+  max-width: 896px;
   width: 100%;
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -36,9 +36,24 @@ nav {
   justify-content: space-between;
 }
 
+.logo{
+  font-family: var(--Poppins);
+  font-style: italic;
+  font-size: 1.3rem;
+  font-weight: 100;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+
 .menu {
   display: flex;
   gap: 20px;
+  cursor: pointer;
+}
+
+.menu button{
+  cursor: pointer;
 }
 
 .outer {
@@ -50,7 +65,7 @@ nav {
 }
 
 .middle {
-  max-width: 1024px;
+  max-width: 896px;
   height: 100%;
   width: 100%;
   background-color: #2e2d2d;
@@ -68,7 +83,7 @@ nav {
 
 
 .inner{
-  max-width: 850px;
+  max-width: 776px;
   width: 100%;
   /* box-shadow: 20px 20px 20px var(--body-color); */
 }
@@ -76,29 +91,36 @@ nav {
 
 .image img{
   height: 300px;
-  width: 850px;
+  width: 776px;
 }
 
 .hero-section{
   background-color: #0b0a0a;
+  display: flex;
 }
 
 .dp-img{
   position: relative;
-  bottom: 6rem;
+  bottom: 4rem;
   left: 2rem;
 }
 
 .dp-img img{ 
-   height: 150px;
+   height: 120px;
    border-radius: 50%;
    position: absolute;
 }
 
 .info {
+  width: 100%;
   padding-top: 4rem;
   padding-left: 2rem;
+  padding-right: 2rem;
   padding-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: violet; */
 }
 
 .name{
@@ -115,11 +137,26 @@ nav {
   line-height: 30px;
 }
 
+.icons a svg{ 
+  color: var(--white);
+  margin-right: 1rem;
+}
+
 .about{
   padding: 2rem;
   background-color: #141313;
+  font-size: 15px;
 }
 
 .about p{
   font-family: var(--Poppins);
 }
+
+.para{
+  font-weight: 200;
+}
+
+hr{
+  opacity: 0.1;
+}
+

@@ -261,6 +261,10 @@ hr { opacity: 0.5; }
   padding: 2rem 0;
 }
 
+.certificates h3{
+  font-family: var(--Poppins);
+}
+
 .meta {
   display: flex;
   padding-bottom: 2rem;
@@ -331,11 +335,19 @@ hr { opacity: 0.5; }
   padding-bottom: 1rem;
   color: var(--Black);
 }
-.connect p {
+
+.connect h2{
   font-family: var(--Poppins);
   opacity: 0.4;
   font-weight: 500;
   font-size: 20px;
+}
+
+.connect p {
+  font-family: var(--Poppins);
+  opacity: 0.4;
+  font-weight: 500;
+  font-size: 15px;
   color: var(--Black);
 }
 

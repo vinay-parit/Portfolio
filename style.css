@@ -198,6 +198,17 @@ hr { opacity: 0.5; }
   color: var(--Black);
 }
 
+.experience p{
+  padding-right: 2rem;
+  font-family: var(--Poppins);
+  padding-bottom: 2rem;
+  font-weight: 400;
+}
+
+.experience p span{
+  font-weight: 600;
+}
+
 .tec-work {
   padding-left: 2rem;
   height: 30vh;

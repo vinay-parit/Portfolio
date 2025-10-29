@@ -102,9 +102,166 @@ nav {
 .inner {
   max-width: 776px;
   width: 100%;
+  background-color: var(--body-color);
 }
 
-.inner p {
-    background-color: var(--body-color);
-    padding: 2rem;
+
+.contact-section {
+  padding: 3rem;
+}
+
+.contact{
+  padding: 2rem 0;
+}
+
+.contact p{
+  opacity: .4;
+  font-size: 18px;
+  font-family: var(--Instrument-Serif);
+}
+
+.contact h2{
+  font-family: var(--Poppins);
+  font-weight: 300;
+  font-size: 2.5rem;
+  line-height: 50px;
+}
+
+.contact h2 span{
+  font-weight: 500;
+}
+
+.contact h3{
+  font-family: var(--Poppins);
+  font-weight: 400;
+  opacity: .4;
+  font-size: 18px;
+}
+
+.info-mail{
+  padding: 1rem 0;
+}
+
+.info-mail span{
+  font-size: 2rem;
+}
+
+.info-mail a{
+  text-decoration: none;
+  color: var(--Black);
+  font-size: 15px;
+  font-family: var(--Poppins);
+}
+
+.info-phone span{
+  font-size: 1.8rem;
+}
+
+.info-phone a{
+  padding-left: 5px;
+  text-decoration: none;
+  color: var(--Black);
+  font-size: 15px;
+  font-family: var(--Poppins);
+}
+
+
+
+
+hr { opacity: 0.5; }
+
+
+.contact-form {
+  /* flex: 1; */
+  /* min-width: 300px; */
+  background: #fff;
+  margin-top: 2rem ;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 10px 10px 10px 10px rgb(233, 230, 230);
+}
+
+.contact-form form input,
+.contact-form form select,
+.contact-form form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.contact-form form textarea {
+  resize: vertical;
+}
+
+.contact-form form button {
+  padding: 15px 30px;
+  font-size: 1rem;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  /* transition: background 0.3s ease; */
+}
+
+.contact-form form button:hover {
+  background: #0056b3;
+}
+
+
+/* ===== Connect & Footer ===== */
+.connect {
+  padding: 2rem;
+  background-color: var(--body-color);
+}
+.connect h3 {
+  font-size: 20px;
+  font-family: var(--Instrument-Serif);
+  opacity: 0.4;
+  font-weight: 400;
+  padding-bottom: 1rem;
+  color: var(--Black);
+}
+
+.connect h2{
+  font-family: var(--Poppins);
+  opacity: 0.4;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.connect p {
+  font-family: var(--Poppins);
+  opacity: 0.4;
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--Black);
+}
+
+.social {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+.social a svg { color: var(--Black); }
+.social a {
+  color: var(--Black);
+  text-decoration: none;
+}
+
+.footer {
+  background-color: var(--body-color);
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+}
+.footer h3 {
+  font-family: var(--Poppins);
+  opacity: 0.4;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--Black);
 }

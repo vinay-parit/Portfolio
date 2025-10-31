@@ -25,6 +25,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 nav {
@@ -196,6 +197,8 @@ hr { opacity: 0.5; }
   font-family: var(--Poppins);
   font-weight: 500;
   color: var(--Black);
+  font-size: 25px;
+  opacity: .4;
 }
 
 .experience p{

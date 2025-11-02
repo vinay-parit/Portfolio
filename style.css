@@ -18,6 +18,7 @@
 body {
   color: var(--Black);
   background-color: var(--body-color);
+  overflow-x: hidden;
 }
 
 header {
@@ -697,4 +698,35 @@ body{
   font-size: 20px;
 }
 
+}
+
+@media (max-width:385px) {
+
+.name {
+    font-size: clamp(1.5rem, 5vw, 1.5rem);
+  }
+
+
+ .icons a svg {
+    width: clamp(18px, 4vw, 16px);
+    height: clamp(18px, 4vw, 16px);
+    
+  }
+
+.hero p {
+  font-size: 12px;
+  font-weight: 700;
+  font-family: var(--Poppins);
+  opacity: 0.4;
+  line-height: 30px;
+  color: var(--Black);
+
+}
+  
+}
+
+@media (max-width:336px){
+  .icons a svg{
+    display: none;
+  }
 }

@@ -119,10 +119,34 @@ hr { opacity: 0.5; }
     width: 100%;
 }
 
-.ip-img, .todo-img{
+.ip-img, .todo-img {
     display: flex;
     justify-content: center;
 }
+
+.pig-img{
+  display: flex;
+  justify-content: center;
+}
+
+.credit-card-img{
+  display: flex;
+  justify-content: center;
+}
+
+.guess-number-img{
+  display: flex;
+  justify-content: center;
+}
+
+.huddle-img{
+  display: flex;
+  justify-content: center;
+  box-shadow: 5px 5px 30px 5px rgb(190, 187, 187);
+  border-radius: 15px;
+
+}
+
 
 .box1 img{
     /* padding: 2rem; */
@@ -146,7 +170,7 @@ hr { opacity: 0.5; }
     font-weight: 500;
 }
 
-.ip-btn , .todo-btn{
+.ip-btn , .todo-btn , .pig-btn , .credit-card-btn , .huddle-btn{
     display: flex;
     padding-top: 1rem;
     gap: 20px;
@@ -171,11 +195,16 @@ hr { opacity: 0.5; }
     
 }
 
+.live:hover , .github:hover{
+  background-color: rgb(211, 207, 207);
+}
 
 .github a{
     text-decoration: none;
     color: var(--Black);
 }
+
+
 
 
 .connect {
@@ -265,11 +294,13 @@ hr { opacity: 0.5; }
     width: 100%;
 }
 
-.ip-img , .todo-img{
+.ip-img , .todo-img {
     display: flex;
     justify-content: center;
     width: 100%;
 }
+
+
 
 .box1 img{
     /* padding: 2rem; */
@@ -279,7 +310,7 @@ hr { opacity: 0.5; }
 }
 
 
-.ip-address , .todo{
+.ip-address , .todo , .credit-card-page , .huddle, .pig-game , .guess-number{
   padding-left: 2rem;
   width: 90%;
 }

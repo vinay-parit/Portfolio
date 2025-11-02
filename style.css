@@ -244,16 +244,45 @@ hr { opacity: 0.5; }
 
 }
 
+.see-all-work{
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-weight: 300;
+}
+
+.see-all-work h2{
+    font-family: var(--Poppins);
+    font-size: 25px;
+    opacity: .4;
+    font-weight: 300;
+}
+
+
+/* .see-work-btn{
+  display: flex;
+  justify-content: center;
+  
+} */
+
+.see-work-btn a button{
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
 
 .box1{
     /* padding: 2rem 0; */
     background-color: var(--body-color);
 }
 
-.todo-img{
+.todo-img , .guess-number-img{
     display: flex;
     justify-content: center;
 }
+
+
 
 .box1 img{
     width: 90%;

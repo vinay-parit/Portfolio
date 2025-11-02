@@ -73,10 +73,10 @@ nav {
 }
 
 .contact-btn button {
-  padding: 5px 15px;
+  padding: 5px 20px;
   border-radius: 20px;
-  font-family: var(--Poppins);
-  font-size: 12px;
+  font-family: var(--Instrument-Serif);
+  font-size: 1rem;
   cursor: pointer;
 }
 
@@ -190,6 +190,7 @@ hr { opacity: 0.5; }
   border: 2px solid #ddd;
   border-radius: 8px;
   font-size: 1rem;
+  font-family: var(--Poppins);
 }
 
 .contact-form form textarea {
@@ -218,7 +219,7 @@ hr { opacity: 0.5; }
   background-color: var(--body-color);
 }
 .connect h3 {
-  font-size: 20px;
+  font-size: 2.5rem;
   font-family: var(--Instrument-Serif);
   opacity: 0.4;
   font-weight: 400;
@@ -265,4 +266,33 @@ hr { opacity: 0.5; }
   font-weight: 500;
   font-size: 15px;
   color: var(--Black);
+}
+
+@media (max-width: 715px) {
+
+    header {
+    background-color: var(--White);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+
+    nav {
+    max-width: 896px;
+    width: 100%;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+}  
+
+@media (max-width:430px){
+  .connect h2{
+    font-size: 18px;
+    font-weight: 300;
+  }
 }

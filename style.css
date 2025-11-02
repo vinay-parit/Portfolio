@@ -74,10 +74,10 @@ nav {
 }
 
 .contact-btn button {
-  padding: 5px 15px;
+  padding: 5px 20px;
   border-radius: 20px;
-  font-family: var(--Poppins);
-  font-size: 12px;
+  font-family: var(--Instrument-Serif);
+  font-size: 1rem;
   cursor: pointer;
 }
 
@@ -654,5 +654,18 @@ body{
   width: 100%;
 }
 
+
+}
+
+
+
+@media (max-width:430px) {
+.icons a svg{
+  margin-right: 0rem;
+}
+
+.connect h2{
+  font-size: 20px;
+}
 
 }

@@ -295,4 +295,18 @@ hr { opacity: 0.5; }
     font-size: 18px;
     font-weight: 300;
   }
+
+  .footer {
+  background-color: var(--body-color);
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+}
+.footer h3 {
+  text-align: start;
+  font-family: var(--Poppins);
+  opacity: 0.4;
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--Black);
+}
 }

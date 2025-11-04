@@ -1,26 +1,44 @@
-# Enable URL rewriting
-RewriteEngine On
+# Robust .htaccess for a static site
+# - Disables MultiViews (prevents content-negotiation collisions)
+# - Forces HTTPS (handles proxy headers like X-Forwarded-Proto)
+# - Redirects direct .html requests to extensionless URLs (SEO-friendly)
+# - Internally rewrites extensionless requests to their .html files when present
+# - Adds caching and security headers where modules are enabled
 
-# Set the base directory to the root
+Options -MultiViews
+
+RewriteEngine On
 RewriteBase /
 
-# Force HTTPS (only if the site is reachable via HTTPS)
-RewriteCond %{HTTPS} off
+# Force HTTPS when not already secure. This checks both Apache's HTTPS
+# flag and the X-Forwarded-Proto header used by many proxies/CDNs.
+# Skip forcing HTTPS for localhost to ease local testing.
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTP_HOST} !^(localhost|127\.0\.0\.1)$ [NC]
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# Default document
+# Use index.html as the directory index
 DirectoryIndex index.html
 
-# Serve extensionless URLs when a corresponding .html file exists
+# 1) Redirect requests that explicitly include .html to the extensionless URL
+#    e.g. GET /about.html  ->  /about  (301)
+RewriteCond %{THE_REQUEST} \s/([^.\s]+)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# 2) Internally rewrite extensionless requests to .html files if present
+#    e.g. /about  ->  /about.html  (served internally, URL stays /about)
 RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*?)/?$ $1.html [L]
 
-# Redirect any direct .html requests to the extensionless URL (SEO friendly)
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP/
-RewriteRule ^([^.]+)\.html$ /$1 [R=301,L]
+# Optional: If you want a SPA fallback (uncomment) - serves index.html for non-file requests
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule . /index.html [L]
 
-# Caching: leverage browser cache for static assets
+# Caching: leverage browser cache for static assets (if mod_expires is enabled)
 <IfModule mod_expires.c>
 	ExpiresActive On
 	ExpiresByType image/avif "access plus 1 month"
@@ -32,11 +50,18 @@ RewriteRule ^([^.]+)\.html$ /$1 [R=301,L]
 	ExpiresByType text/html "access plus 1 hour"
 </IfModule>
 
-# Security headers (helpful when served via Apache)
+# Security headers (if mod_headers is enabled)
 <IfModule mod_headers.c>
 	Header always set X-Frame-Options "SAMEORIGIN"
 	Header always set X-Content-Type-Options "nosniff"
 	Header always set Referrer-Policy "no-referrer-when-downgrade"
 	Header always set X-XSS-Protection "1; mode=block"
+	# HSTS: only set over HTTPS; safe to include — browsers will ignore it over HTTP
 	Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 </IfModule>
+
+# Notes:
+# - If you're hosting on Vercel, Netlify, or another platform that doesn't use Apache,
+#   this file will be ignored. For Vercel use `vercel.json`; for Netlify use `_redirects` and `_headers`.
+# - If rules seem not to take effect, ensure AllowOverride is enabled for your site's Apache
+#   configuration (AllowOverride All) and that .htaccess is placed in the site's document root.
